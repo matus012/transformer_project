@@ -1,0 +1,14 @@
+22:48:51 | INFO | train | Starting run: distilbert_baseline
+22:48:51 | INFO | train | Config saved to ./experiments/distilbert_baseline/config.json
+22:48:51 | INFO | train | Git commit: 4e67d61885731617b6917e47044c432d3d290f63
+22:48:51 | INFO | train | Loading dataset...
+22:48:54 | INFO | train | Train: 9002, Val: 1001, Test: 3080
+22:48:54 | INFO | train | Loading model: distilbert-base-uncased
+22:51:17 | INFO | train | Trainable params: 67,012,685 / 67,012,685
+22:51:17 | INFO | train | Starting training...
+22:51:55 | INFO | train | Epoch 1 | val_loss=1.205784 acc=0.772228 macro_f1=0.730074
+22:52:32 | INFO | train | Epoch 2 | val_loss=0.41135 acc=0.902098 macro_f1=0.89663
+22:53:10 | INFO | train | Epoch 3 | val_loss=0.351784 acc=0.904096 macro_f1=0.903465
+22:53:11 | INFO | train | Training done in 113.5s
+22:53:11 | INFO | train | Best model saved to ./experiments/distilbert_baseline\best_model
+22:53:11 | INFO | train | Plots saved.
