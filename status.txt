@@ -1,11 +1,11 @@
 PROJECT: Banking77 Transformer Fine-Tuning (ML Assignment 20)
-LAST UPDATED: 2026-04-28
+LAST UPDATED: 2026-04-30
 
-CURRENT PHASE: 0 (Planning complete)
-NEXT PHASE: 1 (Setup)
+CURRENT PHASE: 1 (Setup) — DONE
+NEXT PHASE: 2 (Data pipeline)
 
 === PHASE STATUS ===
-[ ] Phase 1: Setup (repo, venv, deps, GPU check)
+[x] Phase 1: Setup (repo, venv, deps, GPU check)
 [ ] Phase 2: Data pipeline (load, tokenize Banking77, val split, class/length stats)
 [ ] Phase 3: Single training run (run 1 end-to-end)
 [ ] Phase 4: Evaluation module (confusion matrix, per-class F1)
@@ -15,32 +15,35 @@ NEXT PHASE: 1 (Setup)
 [ ] Phase 8: Documentation (README, defense prep)
 [ ] Phase 9: Final polish (clean repo, tag release)
 
-=== LAST COMPLETED ===
-- Planning + ideation session finished
-- Scope locked: NLP intent classification, DistilBERT fine-tuning on Banking77
-- 8-run experiment matrix defined
-- Repo structure defined
-- Supervisor approved pretrained fine-tuning approach
-- Defense format confirmed: free-hand verbal, no slides
-- Training defaults locked: fp16, fixed epochs + best-by-val-macro-F1, CSV+text logging,
-  no W&B, OOM fallback (batch 8 + grad accum 2), wall-clock logged per run
-- CCLI phase report format defined
+=== LAST COMPLETED (Phase 1) ===
+- Repo created at C:\Users\matus\A_MAIN\tuke01\rocnik2_ls\02_ml\assignment\ml_transformer\transformer_project
+  (NOTE: deviation from plan §4 path — actual location is under tuke01/, not personal/)
+- GitHub remote: https://github.com/matus012/transformer_project
+- Default branch: main
+- Directory skeleton complete (src/, experiments/, notebooks/, models/, data/, scripts/, archive/)
+- venv created (.venv\, Python 3.11)
+- Deps installed (torch 2.5.1+cu121 fallback — cu126 wheels for 2.5.1 don't exist)
+- GPU check passes: CUDA available, RTX 4060 Laptop, 8.59 GB VRAM
+- Files in place: .gitignore, LICENSE (MIT, Matus Filo), README stub, plan_transformer.md,
+  context.md, status.txt, src/__init__.py, scripts/gpu_check.py,
+  archive/debug_log.md, archive/decisions.md
+- First commit pushed to GitHub main (commit 847b64e)
 
 === BLOCKERS ===
-None. Cleared to start Phase 1.
+None.
 
 === NEXT ACTION ===
-Start Phase 1 in CCLI:
-- Create GitHub repo: banking77-transformer-tuning (public, MIT)
-- Create venv with Python 3.11 at project root
-- Pin and install deps (torch CUDA 12.1 build, transformers, datasets, gradio, etc.)
-- Verify CUDA + GPU visible to PyTorch
-- Initial commit with repo skeleton + plan_transformer.md + .gitignore + LICENSE
+Execute Phase 2 in CCLI:
+- Load Banking77 from HuggingFace (PolyAI/banking77)
+- Build tokenization pipeline (DistilBERT tokenizer, max_len=128)
+- Carve stratified 90/10 val split from train (seed=42)
+- Log class distribution + token length stats (median, p95, max)
+- Implement src/data.py + src/utils.py (seed, device, logging helpers)
 
 === NOTES ===
-- Project root: C:\Users\matus\A_MAIN\personal\banking77-transformer-tuning\
+- Project root: C:\Users\matus\A_MAIN\tuke01\rocnik2_ls\02_ml\assignment\ml_transformer\transformer_project
 - Hardware: RTX 4060 Laptop 8GB VRAM, i7-13650HX, 16GB RAM
-- CUDA toolkit 12.6, driver supports 13.0
 - All work local (no HPC)
 - Approval gate between every phase
 - CCLI executes coding; plan-keeper CChat reviews against plan
+- torch is cu121 build (works fine on CUDA 12.6 driver — backward compat)
