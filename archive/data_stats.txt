@@ -1,0 +1,20 @@
+=== Banking77 Stats ===
+Train size: 9002
+Val size: 1001
+Test size: 3080
+Num classes: 77
+
+=== Class Distribution (train) ===
+min count: 32 (intent: contactless_not_working)
+max count: 168 (intent: card_payment_fee_charged)
+mean: 116.9
+median: 114.0
+imbalance ratio (max/min): 5.25
+
+=== Token Length (train, pre-truncation) ===
+mean: 16.2
+median: 13.0
+p95: 37.0
+p99: 53.0
+max: 98
+truncation rate at max_len=128 (%): 0.00
