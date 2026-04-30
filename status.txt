@@ -1,0 +1,46 @@
+PROJECT: Banking77 Transformer Fine-Tuning (ML Assignment 20)
+LAST UPDATED: 2026-04-28
+
+CURRENT PHASE: 0 (Planning complete)
+NEXT PHASE: 1 (Setup)
+
+=== PHASE STATUS ===
+[ ] Phase 1: Setup (repo, venv, deps, GPU check)
+[ ] Phase 2: Data pipeline (load, tokenize Banking77, val split, class/length stats)
+[ ] Phase 3: Single training run (run 1 end-to-end)
+[ ] Phase 4: Evaluation module (confusion matrix, per-class F1)
+[ ] Phase 5: Experiment sweep (runs 2-8)
+[ ] Phase 6: Analysis notebook (cross-run plots)
+[ ] Phase 7: Gradio app
+[ ] Phase 8: Documentation (README, defense prep)
+[ ] Phase 9: Final polish (clean repo, tag release)
+
+=== LAST COMPLETED ===
+- Planning + ideation session finished
+- Scope locked: NLP intent classification, DistilBERT fine-tuning on Banking77
+- 8-run experiment matrix defined
+- Repo structure defined
+- Supervisor approved pretrained fine-tuning approach
+- Defense format confirmed: free-hand verbal, no slides
+- Training defaults locked: fp16, fixed epochs + best-by-val-macro-F1, CSV+text logging,
+  no W&B, OOM fallback (batch 8 + grad accum 2), wall-clock logged per run
+- CCLI phase report format defined
+
+=== BLOCKERS ===
+None. Cleared to start Phase 1.
+
+=== NEXT ACTION ===
+Start Phase 1 in CCLI:
+- Create GitHub repo: banking77-transformer-tuning (public, MIT)
+- Create venv with Python 3.11 at project root
+- Pin and install deps (torch CUDA 12.1 build, transformers, datasets, gradio, etc.)
+- Verify CUDA + GPU visible to PyTorch
+- Initial commit with repo skeleton + plan_transformer.md + .gitignore + LICENSE
+
+=== NOTES ===
+- Project root: C:\Users\matus\A_MAIN\personal\banking77-transformer-tuning\
+- Hardware: RTX 4060 Laptop 8GB VRAM, i7-13650HX, 16GB RAM
+- CUDA toolkit 12.6, driver supports 13.0
+- All work local (no HPC)
+- Approval gate between every phase
+- CCLI executes coding; plan-keeper CChat reviews against plan

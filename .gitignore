@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+models/
+data/
+experiments/*/best_model/
+.ipynb_checkpoints/
+*.egg-info/
+.pytest_cache/
+.env
+.DS_Store
+Thumbs.db
