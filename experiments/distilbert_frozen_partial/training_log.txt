@@ -1,0 +1,14 @@
+14:01:11 | INFO | train | Starting run: distilbert_frozen_partial
+14:01:11 | INFO | train | Config saved to ./experiments/distilbert_frozen_partial/config.json
+14:01:11 | INFO | train | Git commit: 3b3ff915dbdb3ab7e17d608583e14547c0e6243d
+14:01:11 | INFO | train | Loading dataset...
+14:01:14 | INFO | train | Train: 9002, Val: 1001, Test: 3080
+14:01:14 | INFO | train | Loading model: distilbert-base-uncased
+14:01:14 | INFO | train | Trainable params: 21,913,421 / 67,012,685
+14:01:14 | INFO | train | Starting training...
+14:01:35 | INFO | train | Epoch 1 | val_loss=1.434606 acc=0.715285 macro_f1=0.650605
+14:01:54 | INFO | train | Epoch 2 | val_loss=0.483652 acc=0.882118 macro_f1=0.871014
+14:02:13 | INFO | train | Epoch 3 | val_loss=0.387585 acc=0.898102 macro_f1=0.894548
+14:02:14 | INFO | train | Training done in 59.1s
+14:02:14 | INFO | train | Best model saved to ./experiments/distilbert_frozen_partial\best_model
+14:02:14 | INFO | train | Plots saved.

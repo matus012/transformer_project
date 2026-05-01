@@ -1,0 +1,14 @@
+14:00:31 | INFO | train | Starting run: distilbert_frozen_encoder
+14:00:31 | INFO | train | Config saved to ./experiments/distilbert_frozen_encoder/config.json
+14:00:31 | INFO | train | Git commit: 3b3ff915dbdb3ab7e17d608583e14547c0e6243d
+14:00:31 | INFO | train | Loading dataset...
+14:00:33 | INFO | train | Train: 9002, Val: 1001, Test: 3080
+14:00:33 | INFO | train | Loading model: distilbert-base-uncased
+14:00:33 | INFO | train | Trainable params: 649,805 / 67,012,685
+14:00:33 | INFO | train | Starting training...
+14:00:42 | INFO | train | Epoch 1 | val_loss=4.230586 acc=0.054945 macro_f1=0.02743
+14:00:51 | INFO | train | Epoch 2 | val_loss=4.063575 acc=0.15984 macro_f1=0.093868
+14:01:00 | INFO | train | Epoch 3 | val_loss=4.000144 acc=0.203796 macro_f1=0.132793
+14:01:01 | INFO | train | Training done in 27.9s
+14:01:01 | INFO | train | Best model saved to ./experiments/distilbert_frozen_encoder\best_model
+14:01:01 | INFO | train | Plots saved.
