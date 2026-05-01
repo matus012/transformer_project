@@ -51,3 +51,50 @@ class ExperimentConfig:
 
 def baseline_config() -> ExperimentConfig:
     return ExperimentConfig(run_name="distilbert_baseline")
+
+
+def distilbert_lr_low() -> ExperimentConfig:
+    return ExperimentConfig(run_name="distilbert_lr_low", learning_rate=2e-5)
+
+
+def distilbert_lr_high() -> ExperimentConfig:
+    return ExperimentConfig(run_name="distilbert_lr_high", learning_rate=1e-4)
+
+
+def distilbert_batch32() -> ExperimentConfig:
+    return ExperimentConfig(run_name="distilbert_batch32", per_device_train_batch_size=32)
+
+
+def distilbert_epochs5() -> ExperimentConfig:
+    return ExperimentConfig(run_name="distilbert_epochs5", num_train_epochs=5)
+
+
+def distilbert_frozen_encoder() -> ExperimentConfig:
+    return ExperimentConfig(run_name="distilbert_frozen_encoder", freeze_strategy="encoder")
+
+
+def distilbert_frozen_partial() -> ExperimentConfig:
+    return ExperimentConfig(
+        run_name="distilbert_frozen_partial",
+        freeze_strategy="partial",
+        partial_freeze_layers=3,
+    )
+
+
+def bert_baseline() -> ExperimentConfig:
+    return ExperimentConfig(
+        run_name="bert_baseline",
+        model_name="bert-base-uncased",
+    )
+
+
+ALL_CONFIGS: dict = {
+    "distilbert_baseline": baseline_config,
+    "distilbert_lr_low": distilbert_lr_low,
+    "distilbert_lr_high": distilbert_lr_high,
+    "distilbert_batch32": distilbert_batch32,
+    "distilbert_epochs5": distilbert_epochs5,
+    "distilbert_frozen_encoder": distilbert_frozen_encoder,
+    "distilbert_frozen_partial": distilbert_frozen_partial,
+    "bert_baseline": bert_baseline,
+}
